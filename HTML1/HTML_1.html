@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Najlepszy duet na świecie - Lista 1</title>
+</head>
+<body>
+	<h1>HTML_1</h1>
+	<hr>
+
+	<h2 id="tekst">1. Tekst</h2>
+	<h3>Nagłówek h4 z akapitem:</h3>
+
+	<h4>Lorem ipsum</h4>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<h3>Tekst wytłuszczony:</h3>
+	<p><b>Lorem ipsum</b></p>
+
+	<h3>Kilka znaków specjalnych:</h3>
+	<p> &forall; &amp; &lt; &gt; </p>
+
+	<hr>
+
+	<h2 id="grafika">2. Grafika</h2>
+	<h3>Naturalny rozmiar:</h3>
+	<img src=obrazek.jpg alt="Ostrów Tumski" title="Tytuł obrazka">
+	<h3>Zmniejszony obrazek:</h3>
+	<img src=obrazek.jpg width=330 height=225 alt="Mniejszy Ostrów Tumski" title="Tytuł obrazka">
+
+	<hr>
+
+	<h2 id="listy">3. Listy</h2>
+	<h3>Numerowana:</h3>
+
+	<ol>
+		<li>Pierwszy element</li>
+		<li>Drugi element</li>
+	</ol>
+
+	<h3>Nienumerowana:</h3>
+
+	<ul>
+		<li>Pierwszy element</li>
+		<li>Drugi element</li>
+	</ul>
+
+	<h3>Zagnieżdżona:</h3>
+	<ol>
+		<li>Pierwszy element</li>
+		<li>Drugi element</li>
+		<ol>
+			<li>Podpunkt pierwszy</li>
+			<li>Podpunkt drugi</li>
+		</ol>
+		<li>Trzeci element</li>
+	</ol>
+
+	<hr>
+
+	<h2 id="tabele">4. Tabele</h2>
+	<h3>Prosta z nagłówkami kolumn i wierszy</h3>
+
+	<table>
+		<tr>
+			<th></th>
+			<th>Kolumna 1</th>
+			<th>Kolumna 2</th>
+		</tr>
+
+		<tr>
+			<th>Wiersz 1</th>
+			<td><center>1.1</center></td>
+			<td><center>1.2</center></td>
+		</tr>
+
+		<tr>
+			<th>Wiersz 2</th>
+			<td><center>2.1</center></td>
+			<td><center>2.2</center></td>
+		</tr>
+	</table>
+
+	<h3>Z łączeniem kolumn</h3>
+
+	<table>
+		<tr>
+			<th></th>
+			<th>Kolumna 1</th>
+			<th>Kolumna 2</th>
+		</tr>
+
+		<tr>
+			<th>Wiersz 1</th>
+			<td><center>1.1</center></td>
+			<td><center>1.2</center></td>
+		</tr>
+		
+		<tr>
+			<th>Wiersz 2</th>
+			<td colspan="2"><center>2.1</center></td>
+		</tr>
+	</table>
+
+	<h3>Z łączeniem wierszy</h3>
+
+	<table>
+		<tr>
+			<th></th>
+			<th>Kolumna 1</th>
+			<th>Kolumna 2</th>
+		</tr>
+
+		<tr>
+			<th>Wiersz 1</th>
+			<td rowspan="2"><center>1</center></td>
+			<td><center>1.2</center></td>
+		</tr>
+
+		<tr>
+			<th>Wiersz 2</th>
+			<td><center>2.2</center></td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<h2>Odnośniki</h2>
+
+	<h3>Do innej strony:</h3>
+	<a href="../index.html">Link do strony głównej</a>
+
+	<h3>Do pierwszego nagłówka:</h3>
+	<a href="#tekst">Wróć do pierwszego nagłówka</a>
+
+	<h3>Do pobrania pliku:</h3>
+	<a href="plik.txt" download="plik.txt">Link do pobrania z tego samego katalogu</a><br>
+	<a href="files/plik.txt" download="files/plik.txt">Link do pobrania z innego katalogu</a><br>
+
+	<h3>Do wysłania maila:</h3>
+	<a href="mailto:joe@example.com?subject=przyklad">Link do wysłania emaila</a>
+
+	<h3>Jako obrazek (link do strony głównej)</h3>
+	<a href="../index.html"><img src="arrow.png" alt="arrow.png" width="128" height="128"></a>
+
+	<hr>
+
+	<h2 id="formularz">6. Formularz</h2>
+
+	<form action="mailto:ashan224@gmail.com" method="post">
+
+		<input type="text" placeholder="Imię"><br>
+		<input type="text" placeholder="Nazwisko"><br>
+		<input type="text" placeholder="Indeks"><br><br>
+
+		<select name="Wybierz opcję">
+			<optgroup label="Grupa 1">
+				<option>Opcja 1.1</option>
+				<option>Opcja 1.2</option>
+				<option>Opcja 1.3</option>
+			</optgroup>
+
+			<optgroup label="Grupa 2">
+				<option>Opcja 2.1</option>
+				<option>Opcja 2.2</option>
+				<option>Opcja 2.3</option>
+			</optgroup>
+
+			<option>Opcja 3</option>
+			<option>Opcja 4</option>
+		</select><br>
+
+		<label><input type="radio">Opcja 1</label><br>
+		<label><input type="radio">Opcja 2</label><br>
+		<label><input type="radio">Opcja 3</label><br><br>
+
+		<label><input type="checkbox">Opcja 1</label><br>
+		<label><input type="checkbox">Opcja 2</label><br>
+		<label><input type="checkbox">Opcja 3</label><br><br>
+
+		<textarea placeholder="Pole tekstowe" cols="50" rows="7"></textarea><br><br>
+		<input type="reset" value="Resetuj">
+		<input type="submit" value="Wyślij">
+	</form>
+</body>
+</html>
