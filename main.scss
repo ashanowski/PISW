@@ -1,0 +1,284 @@
+$black: #222222;
+$black2: #141414;
+$white: #DDDDDD;
+$orange: #ff704c;
+$deepspace: #395e66;
+$cadetgray: #1d3135;
+
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    margin: auto;
+    color: $white;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    width: 1000px;
+
+    background-image: url(space-bg.jpg);
+    background-position: 50%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+#logo
+{
+    height: 150px;
+    background-color: $black2;
+	h1
+	{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 900;
+		font-size: 92px;
+		text-align: center;
+		text-transform: uppercase;
+        color: $white;
+        padding-top: 10px;
+        margin-top: 0;
+		margin-bottom: 0px;
+	}
+
+	h2
+	{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 900;
+		font-size: 14px;
+		text-align: justify;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		color: $white;
+        margin-top: 0;
+        margin-left: 185px;
+		
+	}
+}
+
+nav
+{
+	background-color: $orange;
+	height: 40px;
+    text-align: center;
+    padding-bottom: 25px;
+
+
+	ul
+	{
+		list-style: none;
+		margin: 0;
+		padding: 20px;
+		font-size: 22px;
+
+		li
+		{
+			display: inline-block;
+			padding-left: 5px;
+			padding-right: 10px;
+			border-right: 1px solid $black;
+
+			a
+			{
+				text-decoration: none;
+				color: $cadetgray;
+			}
+
+			a:hover
+			{
+				color: $white;
+			}
+		}
+
+		li:first-child
+		{
+			border-left: 1px solid $black;
+		}
+
+	}
+}
+
+
+main
+{
+    width: 1000px;
+    background-color: $black;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Libre Franklin', sans-serif;
+
+	h1 
+	{
+		font-weight: 700;
+		font-size: 30px;
+	}
+	p
+	{
+		font-weight: 400;
+		text-align: justify;
+	}
+
+	#cytat_musk
+	{
+		width: 700px;
+		height: 260px;
+		background-color: $black2;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+		border-radius: 10px;
+
+		#zdj_musk
+		{
+			width: 183px;
+			float: left;
+			padding: 10px;
+
+			img
+			{
+				border-radius: 20%;
+			}
+		}
+
+		#cytat
+		{
+			width: 650px;
+			color: $white;
+			padding: 20px;
+			font-size: 30px;
+
+			#podpis
+			{
+				text-align: right;
+			}
+		}
+    }
+
+    .glowny_napis
+    {
+        text-align: center;
+    }
+
+    .obok
+    {
+        float: left;
+        width: 45%;
+        text-align: justify;
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+
+    .ciemne_tlo
+    {
+        background-color: $black2;
+
+        #info_cd
+        {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 2em;
+            margin-right: 2em;
+            text-align: center;
+        }
+    }
+
+    #info_warning
+    {
+        font-size: 150%;
+        color: red;
+    }
+
+    #zad4
+    {
+        border: dotted $white;
+        font-size: 50%;
+        margin-top: 50%;
+    }
+
+    .greenMove
+    {
+        color: green;
+        position: relative;
+        bottom: -25px;
+        right: -15px;
+    }
+    
+}
+
+footer
+{
+    .info
+    {
+        width: 100%;
+        background-color: $orange;
+        height: 30px;
+        font-size: 20px;
+        color: $black;
+        text-align: center;
+    }
+
+    .socials
+    {
+        width:100%;
+        text-align: center;
+        background-color: #191d21;
+    }
+
+    .socialdivs
+    {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fb
+    {
+        width: 250px;
+        height: 155px;
+        float:left;
+    }
+
+    .fb:hover
+    {
+        background-color: #4668b3;
+    }
+
+    .yt
+    {
+        width: 250px;
+        height: 155px;
+        float:left;
+    }
+
+    .yt:hover
+    {
+        background-color: #d94348;
+    }
+
+    .tw
+    {
+        width: 250px;
+        height: 155px;
+        float:left;
+    }
+
+    .tw:hover
+    {
+        background-color: #3095d3;
+    }
+
+    .gplus
+    {
+        width: 250px;
+        height: 155px;
+        float:left;
+    }
+
+    .gplus:hover
+    {
+        background-color: #d95333;
+    }
+}
