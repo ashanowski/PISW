@@ -39,7 +39,7 @@ body
 		text-align: center;
 		text-transform: uppercase;
         color: $white;
-        padding-top: 10px;
+        padding-top: 0;
         margin-top: 0;
 		margin-bottom: 0px;
 	}
@@ -229,11 +229,11 @@ main
         border-width: 6px;
         border-color: royalblue;
         .cienka{
-            border-style: thin;
+            border-width: thin;
         }
 
         .gruba{
-            border-style: thick;
+            border-width: thick;
         }
 
         .podwojna{

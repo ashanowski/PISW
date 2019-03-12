@@ -24,7 +24,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #DDDDDD;
-    padding-top: 10px;
+    padding-top: 0;
     margin-top: 0;
     margin-bottom: 0px; }
   #logo h2 {
@@ -139,9 +139,9 @@ main {
     border-width: 6px;
     border-color: royalblue; }
     main #linie .cienka {
-      border-style: thin; }
+      border-width: thin; }
     main #linie .gruba {
-      border-style: thick; }
+      border-width: thick; }
     main #linie .podwojna {
       border-style: double; }
     main #linie .kropkowana {
