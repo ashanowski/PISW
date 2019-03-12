@@ -103,13 +103,13 @@ main {
     text-align: justify;
     margin-right: 10px;
     margin-left: 30px; }
+  main .zdjecie {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
   main #info_warning {
     font-size: 150%;
     color: red; }
-  main #zad4 {
-    border: dotted #DDDDDD;
-    font-size: 50%;
-    margin-top: 50%; }
   main .greenMove {
     color: green;
     position: relative;

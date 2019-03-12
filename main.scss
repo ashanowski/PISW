@@ -173,17 +173,17 @@ main
     }
 
 
+    .zdjecie
+    {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
     #info_warning
     {
         font-size: 150%;
         color: red;
-    }
-
-    #zad4
-    {
-        border: dotted $white;
-        font-size: 50%;
-        margin-top: 50%;
     }
 
     .greenMove
