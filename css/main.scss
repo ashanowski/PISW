@@ -20,7 +20,7 @@ body
     grid-template-rows: 1fr auto;
     width: 1000px;
 
-    background-image:  url(rocket-logo.png), url(space-bg.jpg);
+    background-image:  url(../img/rocket-logo.png), url(../img/space-bg.jpg);
     background-size: 130px, auto;
     background-position: bottom right 20px, 50%;
     background-repeat: no-repeat, repeat-y;
@@ -172,7 +172,6 @@ main
         margin-right: 10px;
         margin-left: 30px;
 
-        border: dotted 1px;
     }
 
 
@@ -272,6 +271,27 @@ main
             text-align: center;
             height: 50px;
         }
+    }
+
+    ul{
+        li{
+            list-style: none;
+            font-size: 28px;
+            text-align: center;
+
+            a{
+                text-decoration: none;
+                color: $white;
+            }
+            a:hover{
+                color: $orange;
+            }
+        }
+    }
+
+    #kontakt_form{
+        margin-left: 20px;
+        margin-top: 20px;
     }
     
 }
