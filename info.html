@@ -10,10 +10,10 @@
     
 	<link href="css/fontello.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/info_script.js"></script>
 
 </head>
-<body>
+<body onload="load();">
 	<header>
 		<div id="logo">
 			<h1>Kármán Line</h1>
@@ -30,6 +30,24 @@
 		</nav>
 	</header>
 	<main>
+        <div id="data"></div>
+        <div id="zegar"></div>
+
+        <div id="sprawdzarka">
+            <h3>Darmowa sprawdzarka ciągu znaków</h3>
+            <p>Wpisz swój ciąg znaków, a program powie, czy jest to tylko napis, czy liczba - jeśli liczba, to powie jakiego typu!</p>
+            <input type="text" id="pole" placeholder="Podaj ciąŋ znaków...">
+            <button id="sprawdzarkaPrzycisk">Sprawdź!</button>
+            <h4>Wynik:</h5>
+            <p id="wynikSprawdzPole"></p>
+        </div>
+
+        <div id="zgadywanka">
+            <h3>Zgadnij liczbę</h3>
+            <p>Prosta zgadywanka, po wylosowaniu liczby użytkownik zgaduje jaka to liczba. Naciśnij przycisk, aby zacząć.</p>
+            <button id="zgadywankaStart">Rozpocznij grę</button><br>
+        </div>
+
         
 
     </main>
