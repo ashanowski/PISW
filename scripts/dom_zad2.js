@@ -24,3 +24,11 @@ p_formularze.innerHTML = "Na stronie jest " + document.forms.length + " formular
 var p_anchory = document.getElementById("zad2_anchory");
 p_anchory.innerHTML = "W dokumencie znajduje się " + document.anchors.length + 
                       " obiektów-kotwic.";
+
+var obrazki = document.getElementById("zadanie2");
+
+function dodajRamke() {
+    for (i=0; i < document.images.length; i++){
+        document.images[i].style.border = "5px solid royalblue";
+    }
+}
