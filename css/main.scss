@@ -20,11 +20,11 @@ body
     grid-template-rows: 1fr auto;
     width: 1000px;
 
-    background-image:  url(../img/rocket-logo.png), url(../img/space-bg.jpg);
-    background-size: 130px, auto;
-    background-position: bottom right 20px, 50%;
-    background-repeat: no-repeat, repeat-y;
-    background-attachment: fixed, fixed;
+    background-image: url(../img/space-bg.jpg);
+    background-size: auto;
+    background-position: 50%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
 }
 
 #logo
@@ -293,6 +293,51 @@ main
         margin-left: 20px;
         margin-top: 20px;
     }
+
+    #zadania_dom{
+        padding: 20px;
+
+        h2{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
+        h3{
+            text-align: center;
+            margin-top: 10px;
+            color: $orange;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .zadanie_dom{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            padding-top: 0;
+            border: 2px solid $white;
+            border-radius: 10px;
+        }
+
+        #zadanie1{
+            #wynikSprawdzPole{
+                text-align: left;
+            }
+        }
+
+
+        #zadanie3{
+            #zad3_paragraf{
+                font-size: 20px;
+                text-align: left;
+            }
+
+        }
+    }
+
     
 }
 

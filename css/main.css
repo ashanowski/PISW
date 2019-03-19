@@ -8,11 +8,11 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   width: 1000px;
-  background-image: url(../img/rocket-logo.png), url(../img/space-bg.jpg);
-  background-size: 130px, auto;
-  background-position: bottom right 20px, 50%;
-  background-repeat: no-repeat, repeat-y;
-  background-attachment: fixed, fixed; }
+  background-image: url(../img/space-bg.jpg);
+  background-size: auto;
+  background-position: 50%;
+  background-repeat: repeat-y;
+  background-attachment: fixed; }
 
 #logo {
   height: 150px;
@@ -173,6 +173,30 @@ main {
   main #kontakt_form {
     margin-left: 20px;
     margin-top: 20px; }
+  main #zadania_dom {
+    padding: 20px; }
+    main #zadania_dom h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 0; }
+    main #zadania_dom h3 {
+      text-align: center;
+      margin-top: 10px;
+      color: #ff704c; }
+    main #zadania_dom p {
+      text-align: center; }
+    main #zadania_dom .zadanie_dom {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      padding-top: 0;
+      border: 2px solid #DDDDDD;
+      border-radius: 10px; }
+    main #zadania_dom #zadanie1 #wynikSprawdzPole {
+      text-align: left; }
+    main #zadania_dom #zadanie3 #zad3_paragraf {
+      font-size: 20px;
+      text-align: left; }
 
 footer .ciemne_tlo {
   background-color: #141414; }

@@ -13,8 +13,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="scripts/info_script.js"></script>
 
+    <script src="scripts/dom_zad3.js"></script>
+
 </head>
-<body onload="load();">
+<body>
 	<header>
 		<div id="logo">
 			<h1>Kármán Line</h1>
@@ -31,29 +33,54 @@
 		</nav>
 	</header>
 	<main>
-        <div id="data"></div>
-        <div id="zegar"></div>
 
-        <div id="sprawdzarka">
-            <h3>Darmowa sprawdzarka ciągu znaków</h3>
-            <p>Wpisz swój ciąg znaków, a program powie, czy jest to tylko napis, czy liczba - jeśli liczba, to powie jakiego typu!</p>
-            <input type="text" id="pole" placeholder="Podaj ciąŋ znaków...">
-            <button id="sprawdzarkaPrzycisk">Sprawdź!</button>
-            <h4>Wynik:</h5>
-            <p id="wynikSprawdzPole"></p>
+        <div id="zadania_dom">
+            <div id="zadanie1" class="zadanie_dom">
+                <h2>Zadanie 1</h2>
+
+            </div>
+
+            <script src="scripts/dom_zad1.js"></script>
+
+            <div id="zadanie3" class="zadanie_dom">
+
+                <h2>Zadanie 3</h2>
+                <h3>Modyfikowanie CSS</h3>
+                <p>Wybierz opcje z rozwijanej listy i naciśnij przycisk "Zmień!" aby zobaczyć zmiany w arkuszu stylu.</p>
+
+                <label for="zad3_czcionka">Czcionka</label>
+                <select name="czcionka" id="zad3_czcionka">
+                    <option value="20px">Rozmiar: 20 (domyślna)</option>
+                    <option value="25px">Rozmiar: 25</option>
+                    <option value="35px">Rozmiar: 35</option>
+                </select>
+                <br><br>
+
+                <label for="zad3_kolor">Kolor czcionki</label>
+                <select name="kolor" id="zad3_kolor">
+                    <option value="white">Biała (domyślna)</option>
+                    <option value="red">Czerwona</option>
+                    <option value="green">Zielona</option>
+                </select>
+                <br><br>
+
+                <label for="zad3_tlo">Kolor tła</label>
+                <select name="tlo" id="zad3_tlo">
+                    <option value="kosmos">Kosmos (domyślne)</option>
+                    <option value="black">Czarne</option>
+                    <option value="white">Białe</option>
+                </select>
+                <br><br>
+
+                <button onclick="zadanie3()">Zmień!</button>
+
+                <p id="zad3_paragraf">Przykładowy tekst</p>
+
+            </div>
+
         </div>
 
-        <div id="zgadywanka">
-            <h3>Zgadnij liczbę</h3>
-            <p>Prosta zgadywanka, po wylosowaniu liczby użytkownik zgaduje jaka to liczba. Naciśnij przycisk, aby zacząć.</p>
-            <button id="zgadywankaStart">Rozpocznij grę</button><br>
-        </div>
 
-
-        <ul>
-            <li><a href="DOM.html">Wersja dla listy zadań z DOM</a></li>
-        </ul>
-        
 
     </main>
 	<footer>
