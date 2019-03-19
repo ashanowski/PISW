@@ -32,3 +32,9 @@ function dodajRamke() {
         document.images[i].style.border = "5px solid royalblue";
     }
 }
+
+function usunRamke(){
+    for (i=0; i < document.images.length; i++){
+        document.images[i].style.border = "none";
+    }
+}
