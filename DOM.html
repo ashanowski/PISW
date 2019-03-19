@@ -37,6 +37,7 @@
         <div id="zadania_dom">
             <div id="zadanie1" class="zadanie_dom">
                 <h2>Zadanie 1</h2>
+                <hr>
 
             </div>
 
@@ -46,6 +47,7 @@
             <div id="zadanie2" class="zadanie_dom">
                 <h2>Zadanie 2</h2>
                 <h3>Kilka informacji na temat strony</h3>
+                <hr>
                 <p id="zad2_obrazki"></p>
 
                 <p id="zad2_linki"></p>
@@ -69,6 +71,7 @@
 
                 <h2>Zadanie 3</h2>
                 <h3>Modyfikowanie CSS</h3>
+                <hr>
                 <p>Wybierz opcje z rozwijanej listy i naciśnij przycisk "Zmień!" aby zobaczyć zmiany w arkuszu stylu.</p>
 
                 <label for="zad3_czcionka">Czcionka</label>
@@ -100,6 +103,37 @@
                 <p id="zad3_paragraf">Przykładowy tekst</p>
 
             </div>
+
+            <div id="zadanie4" class="zadanie_dom">
+
+                <h2>Zadanie 4</h3>
+                <h3>Właściwości obiektu event</h2>
+                <hr>
+
+                <p onmousedown="czyNacisniety(event)">Najedź na ten tekst i wciśnij jeden z przycisków: alt, ctrl lub shift, jednocześnie klikając na ten paragraf.</p>
+                <hr>
+
+
+                <p>Dodaj do podanego pola jakiś znak, lub naciśnij inny klawisz, aby poznać jego kod.</p>
+                <input type="text" size="40" onkeypress="sprawdzKodZnaku(event)" onkeydown="sprawdzKodKlawisza(event)">
+
+                <p class="zad4_wynik">onkeypress - <span id="keypress"></span></p>
+                <p class="zad4_wynik">onkeydown - <span id="keydown"></span></p>
+
+                <hr>
+                <p>Kliknij w odrębie poniższego paragrafu aby sprawdzić pozycję kursora.</p>
+
+                <br>
+                <p onclick="sprawdzPozycje(event)" id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque est ab eos asperiores, ex unde quisquam atque illo illum. Repellat vero quam exercitationem numquam, beatae sint amet neque dolore ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque non veniam quis rerum voluptatibus unde velit quasi exercitationem earum porro, quos, aspernatur tempore delectus reiciendis eos? At, dolorem. Quaerat, nemo!</p>
+
+                <h4>Pozycja według klienta</h4>
+                <p id="zad4_pozycja_client">X = brak<br>Y = brak</p>
+                <h4>Pozycja według ekranu</h4>
+                <p id="zad4_pozycja_screen">X = brak<br>Y = brak</p>
+            </div>
+
+            <script src="scripts/dom_zad4.js"></script>
+
 
         </div>
 

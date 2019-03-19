@@ -33,6 +33,6 @@ div.insertBefore(h3, div.childNodes[2]);
 div.appendChild(inpt);
 
 div.appendChild(document.createElement("label"));
-div.replaceChild(btn, div.childNodes[6]);
+div.replaceChild(btn, div.childNodes[8]);
 
 div.appendChild(p_wynik);

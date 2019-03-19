@@ -197,6 +197,12 @@ main {
     main #zadania_dom #zadanie3 #zad3_paragraf {
       font-size: 20px;
       text-align: left; }
+    main #zadania_dom #zadanie4 .zad4_wynik {
+      text-align: left; }
+    main #zadania_dom #zadanie4 #lorem {
+      text-align: justify; }
+    main #zadania_dom #zadanie4 h4 {
+      text-align: center; }
 
 footer .ciemne_tlo {
   background-color: #141414; }
