@@ -194,15 +194,23 @@ main {
       border-radius: 10px; }
     main #zadania_dom #zadanie1 #wynikSprawdzPole {
       text-align: left; }
+    main #zadania_dom #zadanie2 img {
+      margin-left: 40px; }
+    main #zadania_dom #zadanie2 button {
+      margin-left: 20px;
+      margin-bottom: 20px; }
     main #zadania_dom #zadanie3 #zad3_paragraf {
       font-size: 20px;
       text-align: left; }
     main #zadania_dom #zadanie4 .zad4_wynik {
       text-align: left; }
-    main #zadania_dom #zadanie4 #lorem {
-      text-align: justify; }
+    main #zadania_dom #zadanie4 img {
+      display: block;
+      margin-left: 17%; }
     main #zadania_dom #zadanie4 h4 {
       text-align: center; }
+    main #zadania_dom #zadanie5 form {
+      margin-left: 370px; }
 
 footer .ciemne_tlo {
   background-color: #141414; }

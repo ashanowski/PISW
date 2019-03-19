@@ -328,6 +328,17 @@ main
             }
         }
 
+        #zadanie2{
+            img{
+                margin-left: 40px;
+            }
+
+            button{
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
 
         #zadanie3{
             #zad3_paragraf{
@@ -342,18 +353,29 @@ main
                 text-align: left;
             }
 
-            #lorem{
-                text-align: justify;
+            img{
+                display: block;
+                margin-left: 17%;
             }
 
             h4{
                 text-align: center;
             }
+
+
+        }
+
+        #zadanie5{
+            form{
+                margin-left: 370px;
+            }
+        }
+
         }
     }
 
     
-}
+
 
 footer
 {
