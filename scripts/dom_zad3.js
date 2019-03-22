@@ -18,8 +18,4 @@ function zadanie3() {
         document.body.style.backgroundImage = 'none';
         document.body.style.backgroundColor = tlo;
     }
-
-
-
-
 }

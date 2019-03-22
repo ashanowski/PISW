@@ -1,3 +1,6 @@
+
+var miesiac = " "
+
 function clock() {
     var today = new Date();
 
@@ -41,7 +44,6 @@ function clock() {
             break;
     }
     
-    var miesiac = " "
 
     switch (today.getMonth() + 1) {
         case 1:
