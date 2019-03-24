@@ -3,7 +3,7 @@
 
     if(isset($_SESSION['logged']) && ($_SESSION['logged'] == true))
     {
-        header('Location: index.html');
+        header('Location: panel.php');
         exit();
     }
 ?>
@@ -47,8 +47,8 @@
             <input type="submit" value="Zaloguj się">
         </form>
  <?php
-    if (isset($_SESSION['error'])) echo $_SESSION['error'];
-    echo $_SESSION['user'];
+	if (isset($_SESSION['error'])) echo $_SESSION['error'];
+	echo password_hash("qwerty", PASSWORD_DEFAULT);
 
 ?>       
 

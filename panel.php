@@ -39,10 +39,11 @@
 		</nav>
 	</header>
 	<main>
-<?php
-    echo "Witaj, ".$_SESSION['user'];
 
-?>
+	<?php
+		echo "Witaj, ".$_SESSION['user'];
+	?>
+	<a href="wyloguj.php">Wyloguj się</a>
     </main>
 	<footer>
 		<div class="info">
