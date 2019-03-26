@@ -80,7 +80,7 @@
             }
         } catch (Exception $e) {
             echo '<span style="color:red">Błąd serwera! Rejestracja chwilowo niedostępna.</span>';
-            //echo '<br>Informacja developerska: '.$e;
+            echo '<br>Informacja developerska: '.$e;
         }
 
         if ($valid){
