@@ -7,16 +7,14 @@
 
         $nick = $_POST['nick'];
 
-        if ( (strlen($nick)) <3 || (strlen($nick) > 20))
+        $pattern = "/^[a-z0-9_-]{3,15}$/";
+
+        $reg_match = preg_match($pattern, $nick);
+
+        if ($reg_match == 0 || $reg_match == false)
         {
             $valid = false;
-            $_SESSION['e_nick'] = 'Nick musi posiadać od 3 do 20 znaków';
-        }
-
-        if (ctype_alnum($nick) == false){
-            $valid = false;
-            $_SESSION['e_nick'] = 'Nick może składać się tylko z liter i cyfr (bez polskich znaków';
-
+            $_SESSION['e_nick'] = 'Nick musi posiadać od 3 do 15 znaków';
         }
 
         $email = $_POST['email'];
@@ -76,18 +74,40 @@
                     $_SESSION['e_email'] = 'Istnieje już konto z tym adresem e-mail!';
                 }
 
+                $result = $connection->query("SELECT id FROM uzytkownicy WHERE user='$nick'");
+
+                if (!$result) throw new Exception($connection->error);
+
+                $nick_num = $result->num_rows;
+
+                if ($nick_num > 0)
+                {
+                    $valid = false;
+                    $_SESSION['e_nick'] = 'Istnieje już gracz z takim nickiem!';
+                }
+
+                if ($valid){
+                    //dodanie do bazy
+
+                    if ($connection->query("INSERT INTO uzytkownicy VALUES (NULL, '$nick', '$pass_hash', '$email')"))
+                    {
+                        $_SESSION['register_success'] = true;
+                        header('Location: greeter.php');
+                    }
+                    else
+                    {
+                        throw new Exception($connection->error);
+
+                    }
+                }
+
                 $connection->close();
             }
         } catch (Exception $e) {
             echo '<span style="color:red">Błąd serwera! Rejestracja chwilowo niedostępna.</span>';
-            //echo '<br>Informacja developerska: '.$e;
+            echo '<br>Informacja developerska: '.$e;
         }
 
-        if ($valid){
-            //dodanie do bazy
-            echo "Udana walidacja";
-            exit();
-        }
     }
 ?>
 

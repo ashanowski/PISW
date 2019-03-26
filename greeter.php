@@ -1,11 +1,15 @@
 <?php
     session_start();
 
-    if(isset($_SESSION['logged']) && ($_SESSION['logged'] == true))
+    if(!isset($_SESSION['register_success']))
     {
-        header('Location: panel.php');
+        header('Location: konto.php');
         exit();
-    }
+	}
+	else
+	{
+		unset($_SESSION['register_success']);
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,6 +45,8 @@
 	</header>
 	<main>
 
+	Rejestracja udana! Zaloguj się na swoje konto!
+
         <form action="zaloguj.php" method="post">
             Login: <br><input type="text" name="login"><br>
             Hasło: <br><input type="password" name="haslo"><br><br>
@@ -48,7 +54,6 @@
         </form>
  <?php
 	if (isset($_SESSION['error'])) echo $_SESSION['error'];
-	unset($_SESSION['error']);
 ?>       
 
         <br>
