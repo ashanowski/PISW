@@ -64,7 +64,7 @@
             }
             else
             {
-                $result = $connection->query("SELECT id FROM uzytkownicy WHERE email='$email");
+                $result = $connection->query("SELECT id FROM uzytkownicy WHERE email='$email'");
 
                 if (!$result) throw new Exception($connection->error);
 
