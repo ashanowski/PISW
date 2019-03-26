@@ -76,18 +76,40 @@
                     $_SESSION['e_email'] = 'Istnieje już konto z tym adresem e-mail!';
                 }
 
+                $result = $connection->query("SELECT id FROM uzytkownicy WHERE user='$nick'");
+
+                if (!$result) throw new Exception($connection->error);
+
+                $nick_num = $result->num_rows;
+
+                if ($nick_num > 0)
+                {
+                    $valid = false;
+                    $_SESSION['e_nick'] = 'Istnieje już gracz z takim nickiem!';
+                }
+
+                if ($valid){
+                    //dodanie do bazy
+
+                    if ($connection->query("INSERT INTO uzytkownicy VALUES (NULL, '$nick', '$pass_hash', '$email')"))
+                    {
+                        $_SESSION['register_success'] = true;
+                        header('Location: greeter.php');
+                    }
+                    else
+                    {
+                        throw new Exception($connection->error);
+
+                    }
+                }
+
                 $connection->close();
             }
         } catch (Exception $e) {
             echo '<span style="color:red">Błąd serwera! Rejestracja chwilowo niedostępna.</span>';
-            //echo '<br>Informacja developerska: '.$e;
+            echo '<br>Informacja developerska: '.$e;
         }
 
-        if ($valid){
-            //dodanie do bazy
-            echo "Udana walidacja";
-            exit();
-        }
     }
 ?>
 
