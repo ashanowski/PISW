@@ -7,16 +7,14 @@
 
         $nick = $_POST['nick'];
 
-        if ( (strlen($nick)) <3 || (strlen($nick) > 20))
+        $pattern = "/^[a-z0-9_-]{3,15}$/";
+
+        $reg_match = preg_match($pattern, $nick);
+
+        if ($reg_match == 0 || $reg_match == false)
         {
             $valid = false;
-            $_SESSION['e_nick'] = 'Nick musi posiadać od 3 do 20 znaków';
-        }
-
-        if (ctype_alnum($nick) == false){
-            $valid = false;
-            $_SESSION['e_nick'] = 'Nick może składać się tylko z liter i cyfr (bez polskich znaków';
-
+            $_SESSION['e_nick'] = 'Nick musi posiadać od 3 do 15 znaków';
         }
 
         $email = $_POST['email'];
