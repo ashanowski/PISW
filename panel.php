@@ -85,7 +85,7 @@
 							array_push($selected_rockets,$rocket);
 						}
 					}
-
+					
 					function leoCompare($selected_rockets)
 					{
 						$rockets_LEO = array('f9'=>array('Falcon 9',22.8), 'a5'=>array('Atlas 5',20.5), 'd4'=>array('Delta IV',11), 'd4h'=>array('Delta IV Heavy',28));
@@ -114,11 +114,12 @@
 					
 					function thrustCompare($selected_rockets)
 					{
-						$rockets_thrust = array('f9'=>array('Falcon 9',7606), 'a5'=>array('Atlas 5',8827), 'd4'=>array('Delta IV',3140), 'd4h'=>array('Delta IV Heavy',10000));
+						//$rockets_thrust = array('f9'=>array('Falcon 9',7606), 'a5'=>array('Atlas 5',8827), 'd4'=>array('Delta IV',3140), 'd4h'=>array('Delta IV Heavy',10000));
+						$rockets_thrust = array(array('Falcon 9',7606), array('Atlas 5',8827), array('Delta IV',3140), array('Delta IV Heavy',10000));
 						echo "<h4>Porównanie ciągu przy starcie</h4>";
-						foreach($selected_rockets as $rocket)
+						for($i=0; $i<=count($selected_rockets)-1; $i++)
 						{
-							$temp = $rockets_thrust[$rocket];
+							$temp = $rockets_thrust[$i];
 							echo "<div class='LEO_compare'>$temp[0] ciąg przy starcie: $temp[1]kN</div>";
 							
 						}
@@ -136,7 +137,7 @@
 					{
 						thrustCompare($selected_rockets);
 					}
-					//$selected_rockets = array();
+					
 				?>
 
 			</div>
