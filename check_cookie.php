@@ -1,15 +1,11 @@
 <?php
     session_start();
-
-    if(!isset($_SESSION['register_success']))
-    {
+    if(!isset($_SESSION['logged'])){
         header('Location: konto.php');
         exit();
-	}
-	else
-	{
-		unset($_SESSION['register_success']);
-	}
+    }
+
+	setcookie("styl", $expire=3600);
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,22 +40,37 @@
 		</nav>
 	</header>
 	<main>
-
-	Rejestracja udana! Zaloguj się na swoje konto!
-
-        <form action="zaloguj.php" method="post">
-            Login: <br><input type="text" name="login"><br>
-            Hasło: <br><input type="password" name="haslo"><br><br>
-            <input type="submit" value="Zaloguj się">
-        </form>
- <?php
-	if (isset($_SESSION['error'])) echo $_SESSION['error'];
-?>       
-
-        <br>
-
-        <a href="rejestracja.php">Nie masz konta? Zarejestruj się!</a>
-
+		<div id="zadania_dom">
+			<div id="check_cookie" class="zadanie_dom">
+				<p>Ustawione ciasteczka:</p>
+				<label>background:<label> 
+				<? 
+					if (!isset($_COOKIE["background"])){
+						print("Nie ustawiono!");
+					}
+					else print($_COOKIE["background"]);
+				?>
+				<br>
+				<label>font_color:</label>		
+				<? 
+					if (!isset($_COOKIE["font_color"])){
+						print("Nie ustawiono!");
+					}
+					else print($_COOKIE["font_color"]);
+				?>
+				<br>
+				<label>font_size:</label>
+				<? 
+					if (!isset($_COOKIE["font_size"])){
+						print("Nie ustawiono!");
+					}
+					else print($_COOKIE["font_size"]);
+				?>
+			</div>
+		</div>
+		<ul>
+			<li><a href="wyloguj.php">Wyloguj się</a></li>
+		</ul>
     </main>
 	<footer>
 		<div class="info">

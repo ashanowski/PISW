@@ -18,7 +18,7 @@
     <meta name="description" content="Karman Line - informacje o autorach">
     
 	<link href="css/fontello.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.php">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="scripts/info_script.js"></script>
 
@@ -41,11 +41,16 @@
 	</header>
 	<main>
 
-        <form action="zaloguj.php" method="post">
-            Login: <br><input type="text" name="login"><br>
-            Hasło: <br><input type="password" name="haslo"><br><br>
-            <input type="submit" value="Zaloguj się">
-        </form>
+	<div id="zadania_dom">
+		<div id="logowanie" class="zadanie_dom">
+			<form action="zaloguj.php" method="post">
+				Login: <br><input type="text" name="login"><br>
+				Hasło: <br><input type="password" name="haslo"><br><br>
+				<input type="submit" value="Zaloguj się">
+			</form>
+		</div>
+	
+	</div>
  <?php
 	if (isset($_SESSION['error'])) echo $_SESSION['error'];
 	unset($_SESSION['error']);
@@ -53,7 +58,9 @@
 
         <br>
 
-        <a href="rejestracja.php">Nie masz konta? Zarejestruj się!</a>
+	<ul>
+        <li><a href="rejestracja.php">Nie masz konta? Zarejestruj się!</a></li>
+	</ul>
 
     </main>
 	<footer>

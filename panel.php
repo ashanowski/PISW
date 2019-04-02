@@ -5,6 +5,7 @@
         exit();
     }
 
+	setcookie("styl", $expire=3600);
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +18,7 @@
     <meta name="description" content="Karman Line - informacje o autorach">
     
 	<link href="css/fontello.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.php">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="scripts/info_script.js"></script>
 
@@ -137,12 +138,51 @@
 					{
 						thrustCompare($selected_rockets);
 					}
-					
 				?>
 
 			</div>
+
+			<div id="change_style" class="zadanie_dom">
+
+				<form action="set_cookie.php" method="post">
+					<br>
+					<label for="zad3_czcionka">Czcionka</label>
+					<select name="czcionka" id="zad3_czcionka">
+						<option value="18px">Rozmiar: 18 (domyślna)</option>
+						<option value="20px">Rozmiar: 20</option>
+						<option value="30px">Rozmiar: 30</option>
+					</select>
+					<br><br>
+
+					<label for="zad3_kolor">Kolor czcionki</label>
+					<select name="kolor" id="zad3_kolor">
+						<option value="white">Biała (domyślna)</option>
+						<option value="red">Czerwona</option>
+						<option value="green">Zielona</option>
+					</select>
+					<br><br>
+
+					<label for="zad3_tlo">Kolor tła</label>
+					<select name="tlo" id="zad3_tlo">
+						<option value="kosmos">Kosmos (domyślne)</option>
+						<option value="black">Czarne</option>
+						<option value="white">Białe</option>
+					</select>
+					<br><br>
+
+					<input type="submit" value="Ustaw">
+
+				</form>
+			</div>
 		</div>
-	<a href="wyloguj.php">Wyloguj się</a>
+
+	<ul>
+
+		<li><a href="wyloguj.php">Wyloguj się</a></li>
+		<li><a href="check_cookie.php">Sprawdź ciasteczka</a></li>
+
+	</ul>
+
     </main>
 	<footer>
 		<div class="info">

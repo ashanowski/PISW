@@ -1,14 +1,44 @@
+<?php
+  header('Content-Type: text/css');
+
+  if (!isset($_COOKIE["background"])){
+    $bg_image = "url(../img/space-bg.jpg)";
+    $bg_color = "none";
+  } else {
+    if ($_COOKIE["background"] == "kosmos"){
+      $bg_image = "url(../img/space-bg.jpg)";
+      $bg_color = "none";
+    }
+    else {
+      $bg_image = "none";
+      $bg_color = $_COOKIE["background"];
+    }
+  }
+
+  if (!isset($_COOKIE['font_color'])){
+    $font_color = "#DDDDDD";
+  } else {
+    $font_color = $_COOKIE['font_color'];
+  }
+
+  if (!isset($_COOKIE['font_size'])){
+    $font_size = "18px";
+  } else {
+    $font_size = $_COOKIE['font_size'];
+  }
+?>
 html {
   height: 100%; }
 
 body {
   margin: auto;
-  color: #DDDDDD;
+  color:<?=$font_color?>;
   min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
   width: 1000px;
-  background-image: url(../img/space-bg.jpg);
+  background-image:<?=$bg_image?>;
+  background-color:<?=$bg_color?>;
   background-size: auto;
   background-position: 50%;
   background-repeat: repeat-y;
@@ -64,6 +94,8 @@ nav {
 main {
   width: 1000px;
   background-color: #222222;
+  margin-top: 0;
+  font-size:<?=$font_size?>;
   min-height: 410px;
   margin-left: auto;
   margin-right: auto;

@@ -7,11 +7,12 @@
 
         $nick = $_POST['nick'];
 
+        //if ( (strlen($nick)) <3 || (strlen($nick) > 20))
         $pattern = "/^[a-z0-9_-]{3,15}$/";
 
         $reg_match = preg_match($pattern, $nick);
 
-        if ($reg_match == 0 || $reg_match == false)
+        if (!$reg_match)
         {
             $valid = false;
             $_SESSION['e_nick'] = 'Nick musi posiadać od 3 do 15 znaków';
@@ -122,7 +123,7 @@
     <meta name="description" content="Karman Line - informacje o autorach">
     
 	<link href="css/fontello.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.php">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="scripts/info_script.js"></script>
 
